@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'ClashDisplay';
+  font-family: 'Clash Display';
   src: url('../fonts/ClashDisplay-Regular.woff2'),
     url('../fonts/ClashDisplay-Regular.woff');
   font-weight: 400;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-  font-family: 'ClashDisplay';
+  font-family: 'Clash Display';
   src: url('../fonts/ClashDisplay-Medium.woff2'), url('../fonts/ClashDisplay-Medium.woff');
   font-weight: 500;
   font-display: swap;
