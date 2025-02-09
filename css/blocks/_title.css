@@ -8,6 +8,9 @@
 .title--large {
   font-size: 32px;
 }
+.title--large-xl {
+  font-size: 36px;
+}
 
 .title--small {
   font-size: 24px;
@@ -16,6 +19,10 @@
 
 .title--center {
   text-align: center;
+}
+
+.title--mb-small-xs {
+  margin-bottom: 12px;
 }
 
 .title--mb-small {
