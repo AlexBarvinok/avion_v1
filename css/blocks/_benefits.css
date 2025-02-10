@@ -4,9 +4,9 @@
 }
 
 .benefits__item {
-  grid-column: span 3;
+  grid-column: 3 span;
   padding-top: 40px;
-  max-width: 266px;
+  /* max-width: 266px; */
   background-position: left top;
   background-size: 24px 24px;
   background-repeat: no-repeat;
@@ -44,4 +44,11 @@
   font-size: 16px;
   line-height: 150%;
   color: var(--dark-primary);
+}
+
+.benefits--about .benefits__item {
+  padding: 48px;
+  padding-top: 84px;
+  background-color: var(--light-grey);
+  background-position: 48px 48px;
 }
