@@ -10,10 +10,6 @@
   <body class="page__body">
     <header class="header">
       <div class="header__top">
-        <!-- container ровняем по центру и ограничиваем ширину -->
-        <!-- header__container делает flex(выставляем элементы в строчку) -->
-        <!-- header__top-container повозволяет делать по шире и позволит растянуть элементы с flexom что бы они были по краям-->
-        <!-- header__bottom-container сделает контент по центру -->
         <div class="container header__container header__top-container">
           <a href="/" class="logo">
             <img src="./img/logo.svg" alt="Avion Logo" />
@@ -135,284 +131,253 @@
       </div>
     </header>
     <main>
-      <section class="hero">
+      <section class="inner-hero inner-hero--all">
         <div class="container">
-          <div class="hero__content">
-            <div class="hero__text">
-              <h1 class="hero__title">
-                The furniture brand for the future, with timeless designs
-              </h1>
-              <a href="#" class="btn btn--theme-dark hero__link">View collection</a>
-              <p class="hero__desc">
-                A&nbsp;new era in&nbsp;eco friendly furniture with Avelon, the French
-                luxury retail brand with nice fonts, tasteful colors and a&nbsp;beautiful
-                way to&nbsp;display things digitally using modern web technologies.
-              </p>
+          <div class="inner-hero__content">
+            <h1 class="inner-hero__title">All products</h1>
+          </div>
+        </div>
+      </section>
+      <section class="catalog">
+        <h2 class="catalog__title visually-hidden">Catalog</h2>
+        <div class="container">
+          <div class="catalog__content grid">
+            <div class="catalog__column">
+              <div class="filters">
+                <div class="filters__item">
+                  <h3 class="filters__title">Product type</h3>
+                  <div class="filters__content">
+                    <label class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        name="product"
+                        class="custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__icon"></span>
+                      <span class="custom-checkbox__text">Furniture</span>
+                    </label>
+
+                    <label class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        name="product"
+                        class="custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__icon"></span>
+                      <span class="custom-checkbox__text">Homeware</span>
+                    </label>
+
+                    <label class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        name="product"
+                        class="custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__icon"></span>
+                      <span class="custom-checkbox__text">Sofas</span>
+                    </label>
+
+                    <label class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        name="product"
+                        class="custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__icon"></span>
+                      <span class="custom-checkbox__text">Homeware</span>
+                    </label>
+
+                    <label class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        name="product"
+                        class="custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__icon"></span>
+                      <span class="custom-checkbox__text">Light fittings</span>
+                    </label>
+
+                    <label class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        name="product"
+                        class="custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__icon"></span>
+                      <span class="custom-checkbox__text">Accessories</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="filters__item">
+                  <h3 class="filters__title">Price</h3>
+                  <div class="filters__content">
+                    <label class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        name="product"
+                        class="custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__icon"></span>
+                      <span class="custom-checkbox__text">0 - 100</span>
+                    </label>
+
+                    <label class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        name="product"
+                        class="custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__icon"></span>
+                      <span class="custom-checkbox__text">101 - 250</span>
+                    </label>
+                    <label class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        name="product"
+                        class="custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__icon"></span>
+                      <span class="custom-checkbox__text">250 +</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="filters__item">
+                  <h3 class="filters__title">Designer</h3>
+                  <div class="filters__content">
+                    <label class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        name="product"
+                        class="custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__icon"></span>
+                      <span class="custom-checkbox__text">Robert Smith</span>
+                    </label>
+
+                    <label class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        name="product"
+                        class="custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__icon"></span>
+                      <span class="custom-checkbox__text">Liam Gallagher</span>
+                    </label>
+
+                    <label class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        name="product"
+                        class="custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__icon"></span>
+                      <span class="custom-checkbox__text">Biggie Smalls</span>
+                    </label>
+                    <label class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        name="product"
+                        class="custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__icon"></span>
+                      <span class="custom-checkbox__text">Thom Yorke</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
             </div>
-            <img
-              src="img/hero-chair-1x.jpg"
-              srcset="img/hero-chair-2px.jpeg 2x"
-              width="520"
-              height="584"
-              alt="chair"
-              class="hero__image"
-            />
+            <div class="catalog__wrapper">
+              <ul class="catalog__products list-reset">
+                <li class="catalog__item">
+                  <article class="product">
+                    <div class="product__top">
+                      <img
+                        src="img/product_1.jpg"
+                        srcset="img/product_1-2x.jpg 2x"
+                        aria-hidden="true"
+                        width="305"
+                        height="375"
+                        loading="lazy"
+                        class="product__image"
+                      />
+                    </div>
+                    <div class="product__content">
+                      <h3 class="product__title">
+                        <a href="#" class="product__link">The Dandy chair</a>
+                      </h3>
+                      <span class="product__price">£250</span>
+                    </div>
+                  </article>
+                </li>
+                <li class="catalog__item">
+                  <article class="product">
+                    <div class="product__top">
+                      <img
+                        src="img/product_1.jpg"
+                        srcset="img/product_1-2x.jpg 2x"
+                        aria-hidden="true"
+                        width="305"
+                        height="375"
+                        loading="lazy"
+                        class="product__image"
+                      />
+                    </div>
+                    <div class="product__content">
+                      <h3 class="product__title">
+                        <a href="#" class="product__link">The Dandy chair</a>
+                      </h3>
+                      <span class="product__price">£250</span>
+                    </div>
+                  </article>
+                </li>
+                <li class="catalog__item">
+                  <article class="product">
+                    <div class="product__top">
+                      <img
+                        src="img/product_1.jpg"
+                        srcset="img/product_1-2x.jpg 2x"
+                        aria-hidden="true"
+                        width="305"
+                        height="375"
+                        loading="lazy"
+                        class="product__image"
+                      />
+                    </div>
+                    <div class="product__content">
+                      <h3 class="product__title">
+                        <a href="#" class="product__link">The Dandy chair</a>
+                      </h3>
+                      <span class="product__price">£250</span>
+                    </div>
+                  </article>
+                </li>
+                <li class="catalog__item">
+                  <article class="product">
+                    <div class="product__top">
+                      <img
+                        src="img/product_1.jpg"
+                        srcset="img/product_1-2x.jpg 2x"
+                        aria-hidden="true"
+                        width="305"
+                        height="375"
+                        loading="lazy"
+                        class="product__image"
+                      />
+                    </div>
+                    <div class="product__content">
+                      <h3 class="product__title">
+                        <a href="#" class="product__link">The Dandy chair</a>
+                      </h3>
+                      <span class="product__price">£250</span>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+              <div class="centered">
+                <button class="btn btn---theme-light">Load more</button>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="benefits">
-        <div class="container">
-          <h2 class="title title--small title--center title--mb-large">
-            What makes our brand different
-          </h2>
-          <ul class="list-reset benefits__list grid">
-            <li class="benefits__item benefits__item--next">
-              <h3 class="benefits__subtitle">Next day as standard</h3>
-              <p class="benefits__desc">
-                Order before 3pm and get your order the next day as&nbsp;standard
-              </p>
-            </li>
-            <li class="benefits__item benefits__item--made">
-              <h3 class="benefits__subtitle">Made by true artisans</h3>
-              <p class="benefits__desc">
-                Handmade crafted goods made with real passion and craftmanship
-              </p>
-            </li>
-            <li class="benefits__item benefits__item--prices">
-              <h3 class="benefits__subtitle">Unbeatable prices</h3>
-              <p class="benefits__desc">
-                For our materials and quality you won&rsquo;t find better prices anywhere
-              </p>
-            </li>
-            <li class="benefits__item benefits__item--packaging">
-              <h3 class="benefits__subtitle">Recycled packaging</h3>
-              <p class="benefits__desc">
-                We&nbsp;use 100% recycled packaging to&nbsp;ensure our footprint
-                is&nbsp;manageable
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="products">
-        <div class="container">
-          <h2 class="products__title title title--large title--mb-small">New ceramics</h2>
-          <ul class="list-reset products__list grid">
-            <li class="products__item">
-              <article class="product">
-                <div class="product__top">
-                  <img
-                    src="img/product_1.jpg"
-                    srcset="img/product_1-2x.jpg 2x"
-                    aria-hidden="true"
-                    width="305"
-                    height="375"
-                    loading="lazy"
-                    class="product__image"
-                  />
-                </div>
-                <div class="product__content">
-                  <h3 class="product__title">
-                    <a href="#" class="product__link">The Dandy chair</a>
-                  </h3>
-                  <span class="product__price">£250</span>
-                </div>
-              </article>
-            </li>
-            <li class="products__item">
-              <article class="product">
-                <div class="product__top">
-                  <img
-                    src="img/product_2.jpg"
-                    srcset="img/product_2-2x.jpg 2x"
-                    aria-hidden="true"
-                    width="305"
-                    height="375"
-                    loading="lazy"
-                    class="product__image"
-                  />
-                </div>
-                <div class="product__content">
-                  <h3 class="product__title">
-                    <a href="#" class="product__link">Rustic Vase Set</a>
-                  </h3>
-                  <span class="product__price">£155</span>
-                </div>
-              </article>
-            </li>
-            <li class="products__item">
-              <article class="product">
-                <div class="product__top">
-                  <img
-                    src="img/product_3.jpg"
-                    srcset="img/product_3-2x.jpg 2x"
-                    aria-hidden="true"
-                    width="305"
-                    height="375"
-                    loading="lazy"
-                    class="product__image"
-                  />
-                </div>
-                <div class="product__content">
-                  <h3 class="product__title">
-                    <a href="#" class="product__link">The Silky Vase</a>
-                  </h3>
-                  <span class="product__price">£125</span>
-                </div>
-              </article>
-            </li>
-            <li class="products__item">
-              <article class="product">
-                <div class="product__top">
-                  <img
-                    src="img/product_4.jpg"
-                    srcset="img/product_4-2x.jpg 2x"
-                    aria-hidden="true"
-                    width="305"
-                    height="375"
-                    loading="lazy"
-                    class="product__image"
-                  />
-                </div>
-                <div class="product__content">
-                  <h3 class="product__title">
-                    <a href="#" class="product__link">The Lucy Lamp</a>
-                  </h3>
-                  <span class="product__price">£399</span>
-                </div>
-              </article>
-            </li>
-          </ul>
-          <div class="centered">
-            <a href="#" class="btn products__btn btn--theme-light">View collection</a>
-          </div>
-        </div>
-      </section>
-      <section class="products">
-        <div class="container">
-          <h2 class="products__title title title--large title--mb-small">New ceramics</h2>
-          <ul class="list-reset products__list grid">
-            <li class="products__item--big">
-              <article class="product">
-                <div class="product__top">
-                  <img
-                    src="img/product_5.jpg"
-                    srcset="img/product_5-2x.jpg 2x"
-                    aria-hidden="true"
-                    width="630"
-                    height="375"
-                    loading="lazy"
-                    class="product__image"
-                  />
-                </div>
-                <div class="product__content">
-                  <h3 class="product__title">
-                    <a href="#" class="product__link">The Poplar suede sofa</a>
-                  </h3>
-                  <span class="product__price">£980</span>
-                </div>
-              </article>
-            </li>
-            <li class="products__item">
-              <article class="product">
-                <div class="product__top">
-                  <img
-                    src="img/product_1.jpg"
-                    srcset="img/product_1-2x.jpg 2x"
-                    aria-hidden="true"
-                    width="305"
-                    height="375"
-                    loading="lazy"
-                    class="product__image"
-                  />
-                </div>
-                <div class="product__content">
-                  <h3 class="product__title">
-                    <a href="#" class="product__link">The Dandy chair</a>
-                  </h3>
-                  <span class="product__price">£250</span>
-                </div>
-              </article>
-            </li>
-            <li class="products__item">
-              <article class="product">
-                <div class="product__top">
-                  <img
-                    src="img/product_7.jpg"
-                    srcset="img/product_7-2x.jpg 2x"
-                    aria-hidden="true"
-                    width="305"
-                    height="375"
-                    loading="lazy"
-                    class="product__image"
-                  />
-                </div>
-                <div class="product__content">
-                  <h3 class="product__title">
-                    <a href="#" class="product__link">The Dandy chair</a>
-                  </h3>
-                  <span class="product__price">£250</span>
-                </div>
-              </article>
-            </li>
-          </ul>
-          <div class="centered">
-            <a href="#" class="btn products__btn btn--theme-light">View collection</a>
-          </div>
-        </div>
-      </section>
-      <section class="newsletter">
-        <div class="container">
-          <div class="newsletter__content">
-            <h2 class="title newsletter__title title--large-xl title--mb-small-xs">
-              Join the club and get the benefits
-            </h2>
-            <p class="newsletter__desc">
-              Sign up&nbsp;for our newsletter and receive exclusive offers on&nbsp;new
-              ranges, sales, pop up&nbsp;stores and more
-            </p>
-            <form class="form newsletter__form" method="POST" action="#">
-              <input
-                type="email"
-                name="email"
-                class="form__input"
-                required
-                placeholder="your@email.com"
-              />
-              <button class="btn form__btn btn--theme-darker" type="submit">
-                Sign up
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-      <section class="about">
-        <div class="about__content">
-          <div class="about__info">
-            <h2 class="title title--small about__title">
-              From a&nbsp;studio in&nbsp;London to&nbsp;a&nbsp;global brand with over 400
-              outlets
-            </h2>
-            <p class="about__desc">
-              When we&nbsp;started Avion, the idea was simple. Make high quality furniture
-              affordable and available for the mass market.
-            </p>
-            <p class="about__desc">
-              Handmade, and lovingly crafted furniture and homeware is&nbsp;what
-              we&nbsp;live, breathe and design so&nbsp;our Chelsea boutique become the
-              hotbed for the London interior design community.
-            </p>
-            <button class="btn btn-theme-light about__btn">Get in touch</button>
-          </div>
-          <img
-            src="img/about-1x.jpg"
-            srcset="img/about-1-2x.jpg 2x"
-            aria-hidden="true"
-            width="720"
-            height="603"
-            loading="lazy"
-            class="about__image"
-          />
         </div>
       </section>
     </main>
