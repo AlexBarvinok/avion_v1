@@ -13,8 +13,13 @@
   font-weight: 400;
   font-family: inherit;
   font-size: 16px;
-  color: var(--border-grey);
   color: var(--dark-primary);
+  user-select: none;
+}
+
+.stepper__btn--disabled {
+  pointer-events: none;
+  color: var(--border-grey);
 }
 
 .stepper__input {
