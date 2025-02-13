@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avion</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/transfer-elements@1.0.7/dist/transfer-elements.min.js"
+      defer
+    ></script>
     <script src="./js/script.js" defer></script>
   </head>
   <body class="page__body">
@@ -93,6 +97,12 @@
                   />
                 </svg>
               </button>
+              <button class="btn-reset burger">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+              </button>
             </div>
           </div>
         </div>
@@ -132,8 +142,8 @@
     </header>
     <main>
       <section class="cart">
-        <h1 class="visually-hidden">Cart</h1>
         <div class="container">
+          <h1 class="visually-hidden cart__main-title">Your shopping cart</h1>
           <div class="cart__content">
             <div class="cart__table">
               <div class="cart__row cart-row--heading cart-grid">

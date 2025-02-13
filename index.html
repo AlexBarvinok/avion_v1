@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avion</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/transfer-elements@1.0.7/dist/transfer-elements.min.js"
+      defer
+    ></script>
     <script src="./js/script.js" defer></script>
   </head>
   <body class="page__body">
@@ -97,6 +101,12 @@
                   />
                 </svg>
               </button>
+              <button class="btn-reset burger">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+              </button>
             </div>
           </div>
         </div>
@@ -151,7 +161,7 @@
             </div>
             <img
               src="img/hero-chair-1x.jpg"
-              srcset="img/hero-chair-2px.jpeg 2x"
+              srcset="img/hero-chair-2x.jpg 2x"
               width="520"
               height="584"
               alt="chair"
@@ -162,7 +172,7 @@
       </section>
       <section class="benefits">
         <div class="container">
-          <h2 class="title title--small title--center title--mb-large">
+          <h2 class="title title--small title--centered title--mb-large">
             What makes our brand different
           </h2>
           <ul class="list-reset benefits__list grid">
@@ -290,14 +300,16 @@
       </section>
       <section class="products">
         <div class="container">
-          <h2 class="products__title title title--large title--mb-small">New ceramics</h2>
-          <ul class="list-reset products__list grid">
+          <h2 class="products__title title title--large title--mb-small">
+            Our popular products
+          </h2>
+          <ul class="list-reset products__list products__list--mobile-slider grid">
             <li class="products__item--big">
               <article class="product">
                 <div class="product__top">
                   <img
                     src="img/product_5.jpg"
-                    srcset="img/product_5-2x.jpg 2x"
+                    srcset="img/product_5-2x.webp 2x"
                     aria-hidden="true"
                     width="630"
                     height="375"

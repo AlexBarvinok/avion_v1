@@ -36,7 +36,15 @@
   outline: none;
 }
 
-.btn:focus-visible {
+.btn--with-icon {
+  gap: 12px;
+}
+
+.btn--with-icon svg {
+  transition: transform 0.3s ease;
+}
+
+.btn- .btn:focus-visible {
   outline: 2px dashed var(--dark-primary);
   outline-offset: var(--outline-offset);
 }
