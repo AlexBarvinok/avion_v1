@@ -1,5 +1,40 @@
+console.log('script load');
 const noticeEl = document.querySelector('.notice');
 const stepperEls = document.querySelectorAll('.stepper');
+const burgerEl = document.querySelector('.burger');
+const headerListEl = document.querySelector('.header__list');
+
+const filtersBtnEl = document.querySelector('.catalog__mobile-btn');
+
+if (filtersBtnEl) {
+  filtersBtnEl.addEventListener('click', () => {
+    const filters = document.querySelector('.filters');
+    filtersBtnEl.classList.toggle('catalog__mobile-btn--active');
+    filters.classList.toggle('filters--active');
+  });
+}
+
+if (headerListEl) {
+  new TransferElements({
+    sourceElement: headerListEl,
+    breakpoints: {
+      767: {
+        targetElement: document.querySelector('.header__bottom'),
+        targetPosition: 1,
+      },
+    },
+  });
+}
+
+if (burgerEl) {
+  const body = document.body;
+  const menuEl = document.querySelector('.header__bottom');
+  burgerEl.addEventListener('click', () => {
+    burgerEl.classList.toggle('burger--active');
+    menuEl.classList.toggle('header__bottom--active');
+    body.classList.toggle('stop-scroll');
+  });
+}
 
 if (noticeEl) {
   const noticeCloseEl = noticeEl.querySelector('.notice__close');
@@ -8,7 +43,6 @@ if (noticeEl) {
     noticeEl.classList.add('notice--hidden');
   });
 }
-console.log('script load');
 
 if (stepperEls) {
   stepperEls.forEach((stepperEl) => {
@@ -21,15 +55,20 @@ if (stepperEls) {
     let count = Number(stepperInputEl.value);
 
     stepperInputEl.addEventListener('change', () => {
-      stepperBtnPlusEl.classList.remove('stepper__btn--disabled');
+      stepperBtnMinusEl.disabled = false;
+      stepperBtnPlusEl.disabled = false;
 
       if (stepperInputEl.value < stepperMin) {
         stepperInputEl.value = stepperMin;
-        stepperBtnPlusEl.classList.remove('stepper__btn--disabled');
+        stepperBtnMinusEl.disabled = true;
+        stepperBtnPlusEl.disabled = false;
       }
       if (stepperInputEl.value > stepperMax) {
         stepperInputEl.value = stepperMax;
-        stepperBtnPlusEl.classList.add('stepper__btn--disabled');
+        stepperBtnPlusEl.disabled = true;
+        stepperBtnMinusEl.disabled = false;
+
+        // stepperBtnPlusEl.classList.add('stepper__btn--disabled');
       }
     });
 
@@ -37,11 +76,13 @@ if (stepperEls) {
       count = Number(stepperInputEl.value);
 
       if (count < stepperMax) {
+        stepperBtnMinusEl.disabled = false;
+        stepperBtnPlusEl.disabled = false;
         count++;
         stepperInputEl.value = count;
       }
       if (count === stepperMax) {
-        stepperBtnPlusEl.classList.add('stepper__btn--disabled');
+        stepperBtnPlusEl.disabled = true;
       }
     });
 
@@ -49,12 +90,13 @@ if (stepperEls) {
       count = Number(stepperInputEl.value);
 
       if (count > stepperMin) {
+        stepperBtnMinusEl.disabled = false;
+        stepperBtnPlusEl.disabled = false;
         count--;
         stepperInputEl.value = count;
-        stepperBtnPlusEl.classList.remove('stepper__btn--disabled');
       }
-      if (count === 1) {
-        stepperInputEl.value = 1;
+      if (count === stepperMin) {
+        stepperBtnMinusEl.disabled = true;
       }
     });
   });

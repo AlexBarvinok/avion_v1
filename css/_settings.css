@@ -9,6 +9,7 @@
 }
 
 .page__body {
+  min-width: 390px;
   font-family: var(--font-family);
 }
 
@@ -46,4 +47,8 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.stop-scroll {
+  overflow: hidden;
 }

@@ -1,7 +1,9 @@
 .logo {
   text-decoration: none;
 }
-
+.logo img {
+  display: block;
+}
 .logo:focus {
   outline: none;
 }
